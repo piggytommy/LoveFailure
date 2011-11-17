@@ -1,4 +1,45 @@
-@import screen
+@import blueprint/grid
 
-#container
-	@include container
+
+body
+	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important
+	
+	h1
+		:font-size 22px
+		
+	a
+		:color #277098
+		:font-size 11px
+		:text-decoration none
+		:padding 2px
+		
+		&:hover
+			:background-color #277098
+			:color #fff
+
+	#header
+		width: 100%
+		height: 40px
+		background-color: #f0eee2
+	
+		.content
+			+container
+		
+			.logo
+				:float left
+				.title
+					:color #665d3c
+					:line-height 40px
+					:font-size 24px
+				.desc
+					:color #999
+					:font-size 11px
+				
+		
+
+	#container
+		@include container
+		margin-top: 20px
+		
+		.container
+			+column(24)

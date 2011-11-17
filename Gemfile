@@ -8,3 +8,5 @@ gem 'bson_ext'
 gem 'haml'
 gem "compass", ">= 0.11.5"
 gem "sass"
+gem 'fancy-buttons'
+gem 'jquery-rails'
