@@ -1,0 +1,31 @@
+@import blueprint/grid
+.article_item
+  +column(15)
+  :padding 10px 0 80px 0
+
+  .title_bar
+    :padding 0 0 5px 0
+    +column(15)
+    a
+      :color #000
+      :font-size 20px
+      :display block
+      :margin-bottom 5px
+  .a_content
+    +column(15)
+    p
+      :color #000
+      :font-size 14px
+      :line-height 1.7
+  .actions_bar
+    :margin-top 10px
+    +column(15)
+    
+    span.a_date
+      :font-size 12px
+      :color #aaa
+      :float left
+    .actions 
+      :float right
+    
+  

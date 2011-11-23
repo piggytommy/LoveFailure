@@ -1,0 +1,48 @@
+= content_for :head do 
+  = stylesheet_link_tag 'fileuploader.css', :media => 'screen'
+  = javascript_include_tag 'fileuploader.js'
+  = stylesheet_link_tag 'site_admin/site_story_photos', :media => 'screen'
+
+.container
+  %h1="故事封面管理"
+  #file-uploader
+    ='上传封面'
+  
+  #story_avatar
+    %img{:src => "" }
+
+  #site_gallery
+    %ul
+      -@photos.each do |p|
+        %li
+          %img{:src => p.image_url(:medium)}
+        
+
+:javascript
+  var uploader = new qq.FileUploaderBasic({
+    element: document.getElementById('file-uploader'),  
+    params: {'is_default': true},
+    allowedExtensions: ['jpg', 'jpeg', 'png'],
+    action: "#{new_default_story_cover_path}",
+    sizeLimit: 8294304,
+    button: document.getElementById('file-uploader'),
+
+    onProgress: function(id, fileName, loaded, total){
+    },
+
+    onSubmit: function(id, fileName){
+      $('#site_gallery ul').prepend(
+        "<li class='loading'>" +
+          "<img src='/images/ui/pic_loading.gif'></img>" +
+        "</li>"
+      );
+    },
+
+    onComplete: function(id, fileName, responseJSON){
+      var id = responseJSON.data.photo.id
+      var url = responseJSON.data.photo.medium
+      var placeholder = $('#site_gallery ul li.loading').first()
+      placeholder.removeClass('loading').find('img').attr('src', url);
+    }
+  });
+   

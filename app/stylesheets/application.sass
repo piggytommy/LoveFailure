@@ -2,44 +2,66 @@
 
 
 body
-	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important
-	
-	h1
-		:font-size 22px
-		
-	a
-		:color #277098
-		:font-size 11px
-		:text-decoration none
-		:padding 2px
-		
-		&:hover
-			:background-color #277098
-			:color #fff
+  font-family: "Lucida Grande", Tahoma, Verdana, Lucida, Arial, sans-serif, Helvetica, "宋体"
 
-	#header
-		width: 100%
-		height: 40px
-		background-color: #f0eee2
-	
-		.content
-			+container
-		
-			.logo
-				:float left
-				.title
-					:color #665d3c
-					:line-height 40px
-					:font-size 24px
-				.desc
-					:color #999
-					:font-size 11px
-				
-		
+  h1, h2, h3, h4
+    :font-weight bold 
+    :color #656568
+  h1
+    :font-size 22px
+    :margin 5px 0
+  h2
+    :font-size 20px
+    :margin 5px 0
+  h3
+    :font-size 16px
+    :margin 5px 0 8px 0
+  h4
+    :font-size 14px
+    :margin 5px 0 8px 0
+  p
+    :font-size 13px
+    :line-height 1.5
+    :color #6a6b6f
+    :text-indent 0px
+      
+  a
+    :color #d3d3f3
+    :font-size 11px
+    :text-decoration none
+    :padding 2px
+    
+    &:hover
+      :color #9A6934
+      :text-decoration underline
 
-	#container
-		@include container
-		margin-top: 20px
-		
-		.container
-			+column(24)
+  #header
+    width: 100%
+    height: 40px
+    background-color: #e3e3ce
+
+    .content
+      +container
+    
+      .logo
+        :float left
+        .title
+          :color #656568
+          :line-height 40px
+          :font-size 24px
+        .desc
+          :color #999
+          :font-size 11px
+            
+    
+
+  #container
+    @include container
+    :padding 20px 0  100px 0
+    
+    .container
+      +column(24)
+
+    .qq-upload-list
+      :display none
+  

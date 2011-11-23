@@ -1,0 +1,66 @@
+= content_for :head do 
+  = stylesheet_link_tag 'fileuploader.css', :media => 'screen'
+  = javascript_include_tag 'fileuploader.js'
+  = javascript_include_tag 'fancybox/fancybox.js'
+  = stylesheet_link_tag 'fancybox.css', :media => 'screen'
+
+#file-uploader
+  %span="uploader"
+  %span#progress
+
+= link_to '选择', '#defaul_photos'
+#default_photos  
+  %span="here are many photos"
+
+#story_avatar
+  %img
+
+  
+= form_for(@story) do |f|
+  - if @story.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@story.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @story.errors.full_messages.each do |msg|
+        %li= msg
+  
+  .field
+    = f.label :name
+    %br
+    = f.text_field :name
+  .field
+    = f.label :description
+    %br
+    = f.text_area :description
+  .field
+    = f.label :type
+    %br
+    = f.text_field :type
+  .field
+    = f.label :private
+    %br
+    = f.check_box :private
+
+  .actions
+    = f.submit
+
+:javascript
+  var uploader = new qq.FileUploader({
+    element: document.getElementById('file-uploader'),  
+    allowedExtensions: ['jpg', 'jpeg', 'png'],
+    action: "#{photos_path}",
+
+    onProgress: function(id, fileName, loaded, total){
+      var progress = Math.round(loaded / total * 100 );
+      $('#progress').text(fileName + ' ' + progress + '%');
+    },
+
+    onSubmit: function(id, fileName){
+    },
+
+    onComplete: function(id, fileName, responseJSON){
+      var id = responseJSON.data.photo.id
+      var url = responseJSON.data.photo.medium
+      $("#story_avatar img").attr('src', url);
+     }
+  });

@@ -1,0 +1,70 @@
+/* line 2, ../../../app/stylesheets/articles/item.sass */
+.article_item {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+  padding: 10px 0 80px 0;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .article_item {
+  overflow-x: hidden;
+}
+/* line 6, ../../../app/stylesheets/articles/item.sass */
+.article_item .title_bar {
+  padding: 0 0 5px 0;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .article_item .title_bar {
+  overflow-x: hidden;
+}
+/* line 9, ../../../app/stylesheets/articles/item.sass */
+.article_item .title_bar a {
+  color: black;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5px;
+}
+/* line 14, ../../../app/stylesheets/articles/item.sass */
+.article_item .a_content {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .article_item .a_content {
+  overflow-x: hidden;
+}
+/* line 16, ../../../app/stylesheets/articles/item.sass */
+.article_item .a_content p {
+  color: black;
+  font-size: 14px;
+  line-height: 1.7;
+}
+/* line 20, ../../../app/stylesheets/articles/item.sass */
+.article_item .actions_bar {
+  margin-top: 10px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .article_item .actions_bar {
+  overflow-x: hidden;
+}
+/* line 24, ../../../app/stylesheets/articles/item.sass */
+.article_item .actions_bar span.a_date {
+  font-size: 12px;
+  color: #aaaaaa;
+  float: left;
+}
+/* line 28, ../../../app/stylesheets/articles/item.sass */
+.article_item .actions_bar .actions {
+  float: right;
+}

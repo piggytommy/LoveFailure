@@ -1,0 +1,55 @@
+@import "blueprint/form"
+@import "fancy-buttons"
+@import blueprint/grid
+
+form
+  +blueprint-form
+
+.left_area
+  :margin-top 20px
+  +column(12)
+  form
+    .field
+      :width 400px
+      #story_name
+        :width 300px
+        :font-size 16px
+        :padding 7px
+      #story_private
+        :margin-right 0px
+
+      #story_description
+        :width 400px
+        :height 300px 
+        :margin-top 3px
+        :font-size 13px
+        :line-height 1.2
+        resize: none
+
+      label
+        :color #999
+        :font-weight normal
+        :font-size 12px
+
+      #story_submit
+        +fancy-button(#ddd, 11px, 3px)
+        :float right
+
+.right_area
+  +column(12, true)
+  :margin-top 20px
+  
+  #story_avatar
+    :margin
+      :bottom 15px
+      :top 20px
+
+  #file-uploader
+    +fancy-button(#ddd, 10px, 3px)
+    :font-size 10px
+    :line-height 10px
+    :padding 3px 5px 
+      
+        
+
+  

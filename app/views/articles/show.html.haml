@@ -1,12 +1,13 @@
-%p.notice
-	=notice
-%p
-	%b="Name:"
-	=@article.name
-
-%p
-	%b="Content"
-	=@article.content
-	
-=link_to 'Edit', edit_article_path(@article) 
-=link_to 'Back', articles_path
+-content_for :head do
+  =stylesheet_link_tag 'articles/show.css', :media => 'screen'
+.container
+.article
+  .title_bar
+    %h1=@article.name
+  .a_content
+    %p
+      =simple_format @article.content
+  .actions_bar  
+    %span.a_date= "#{time_ago_in_words(@article.created_at)}前" 
+    .actions
+      = link_to '编辑', edit_story_article_path(@story, @article)

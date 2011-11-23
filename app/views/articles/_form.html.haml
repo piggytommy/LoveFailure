@@ -1,89 +1,89 @@
 -content_for :head do
-	=stylesheet_link_tag 'articles/form.css', :media => 'screen'
+  =stylesheet_link_tag 'articles/form.css', :media => 'screen'
 	
 .form_area
-	.left_column
-		=form_for @article, do |f|
-			.field
-				.label
-					=f.label :name, "标题"
-				=f.text_field :name
-			.field
-				.actions
-					=f.label :content, "内容"
-					= link_to '全屏模式', 'javascript:void(0)', :class => 'fullscreen'
-				=f.text_area :content
-				.slogan
-					%span.left='第33天'
-					%span.right="用文字去忘记"
-			.actions
-				=f.submit "完成"
+  .left_column
+    =form_for [@story,@article], do |f|
+      .field
+        .label
+          =f.label :name, "标题"
+        =f.text_field :name, :class => 'text_input'
+      .field
+        .actions
+          =f.label :content, "内容", :class => 'area_input'
+          = link_to '全屏模式', 'javascript:void(0)', :class => 'fullscreen'
+        =f.text_area :content
+        .slogan
+          %span.left='第33天'
+          %span.right="用文字去忘记"
+      .actions
+        =f.submit "完成", :class => 'submit'
 
-	.right_column
+  .right_column
 
 .full_screen_mode
-	= link_to '退出全屏', 'javascript:void(0)', :class => 'normal_mode'
+  = link_to '退出全屏', 'javascript:void(0)', :class => 'normal_mode'
 	
 	
 
 :javascript
-	$("a.fullscreen").bind('click', showFullScreenForm);
-	$("a.normal_mode").bind('click', showNormalForm);
+  $("a.fullscreen").bind('click', showFullScreenForm);
+  $("a.normal_mode").bind('click', showNormalForm);
 
-	
-	function showFullScreenForm() {
-		var w = $(window).width();
-		var h = $(window).height();
-		var $form = $(".left_column form");
-		$form.appendTo('.full_screen_mode');
-		if (w > 800) {
-		$form.css('marginLeft', (w-800)/2 + "px");
-		}
-		$form.css('marginTop', "50px");
-		$('.full_screen_mode').show();
-		$('#article_content').bind('focusin', startWrting);
-		$('#article_content').bind('focusout', stopWrting);
-	}
-	
-	function showNormalForm() {
-		var $form = $(".full_screen_mode form");
-		$form.appendTo('.left_column');
-		$form.css('marginLeft', "0px");
-		$form.css('marginTop', "0px");
-		$('.full_screen_mode').hide();
-		$('#article_content').unbind('focusin');
-		$('#article_content').unbind('focusout');
-	}
-	
-	function startWrting() {
-		$('.full_screen_mode form .slogan span').fadeOut(2000);
-		$('.full_screen_mode a.normal_mode').fadeOut(2000);
-		$('#article_content').animate({borderTopColor : "#fff",
-											 borderLeftColor : "#fff",
-											 borderRightColor : "#fff",
-											 borderBottomColor : "#fff"}, 2000);
-		$('#article_name').animate({borderTopColor : "#fff",
-		 									 borderLeftColor : "#fff",
-		 									 borderRightColor : "#fff",
-		 									 borderBottomColor : "#fff"}, 2000);
-		
-	}
-	
-	function stopWrting() {
-		$('.full_screen_mode form .slogan span').fadeIn(1000);
-		$('.full_screen_mode a.normal_mode').fadeIn(1000);
-		$('#article_content').animate({borderTopColor : "#BED1DD",
-											 borderLeftColor : "#BED1DD",
-											 borderRightColor : "#BED1DD",
-											 borderBottomColor : "#BED1DD"}, 1000);
-		$('#article_name').animate({borderTopColor : "#BED1DD",
-		 									 borderLeftColor : "#BED1DD",
-		 									 borderRightColor : "#BED1DD",
-		 									 borderBottomColor : "#BED1DD"}, 1000);
-	}
- 
-	
-	
-	
-		
+  
+  function showFullScreenForm() {
+      var w = $(window).width();
+      var h = $(window).height();
+      var $form = $(".left_column form");
+      $form.appendTo('.full_screen_mode');
+      if (w > 800) {
+      $form.css('marginLeft', (w-800)/2 + "px");
+      }
+      $form.css('marginTop', "50px");
+      $('.full_screen_mode').show();
+      $('form textarea').bind('focusin', startWrting);
+      $('form textarea').bind('focusout', stopWrting);
+  }
+  
+  function showNormalForm() {
+      var $form = $(".full_screen_mode form");
+      $form.appendTo('.left_column');
+      $form.css('marginLeft', "0px");
+      $form.css('marginTop', "0px");
+      $('.full_screen_mode').hide();
+      $('form textarea').unbind('focusin');
+      $('form textarea').unbind('focusout');
+  }
+  
+  function startWrting() {
+      $('.full_screen_mode form .slogan span').stop(true, true).fadeOut(2000);
+      $('.full_screen_mode a.normal_mode').stop(true, true).fadeOut(2000);
+      $('form textarea').stop(true, true).animate({borderTopColor : "#fff",
+                                           borderLeftColor : "#fff",
+                                           borderRightColor : "#fff",
+                                           borderBottomColor : "#fff"}, 2000);
+      $('form input.text_input').stop(true, true).animate({borderTopColor : "#fff",
+                                           borderLeftColor : "#fff",
+                                           borderRightColor : "#fff",
+                                           borderBottomColor : "#fff"}, 2000);
+      
+  }
+  
+  function stopWrting() {
+      $('.full_screen_mode form .slogan span').stop(true, true).fadeIn(1000);
+      $('.full_screen_mode a.normal_mode').stop(true, true).fadeIn(1000);
+      $('form textarea').stop(true, true).animate({borderTopColor : "#BED1DD",
+                                           borderLeftColor : "#BED1DD",
+                                           borderRightColor : "#BED1DD",
+                                           borderBottomColor : "#BED1DD"}, 1000);
+      $('form input.text_input').stop(true, true).animate({borderTopColor : "#BED1DD",
+                                           borderLeftColor : "#BED1DD",
+                                           borderRightColor : "#BED1DD",
+                                           borderBottomColor : "#BED1DD"}, 1000);
+  }
+
+  
+  
+  
+      
 

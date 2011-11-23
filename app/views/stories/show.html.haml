@@ -1,0 +1,14 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), stories_path
+  = link_to t('edit'), edit_story_path(@story)
+
+%dl
+  %dt= Story.human_attribute_name :name
+  %dd= @story.name
+  %dt= Story.human_attribute_name :description
+  %dd= @story.description
+  %dt= Story.human_attribute_name :type
+  %dd= @story.type
+  %dt= Story.human_attribute_name :private
+  %dd= @story.private

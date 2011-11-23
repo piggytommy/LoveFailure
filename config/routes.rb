@@ -1,5 +1,17 @@
 Loveloser::Application.routes.draw do
-  resources :articles
+  resources :stories do
+    resources :articles
+  end
+
+
+  controller :site_admin do
+    match '/site_admin/site_story_photos' => :site_story_photos, :as => "site_story_photos" 
+  end
+
+  controller :photos do
+    match '/photos/new_story_cover' => :new_story_cover, :as => "new_story_cover"
+    match '/photos/new_default_story_cover' => :new_default_story_cover, :as => "new_default_story_cover"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

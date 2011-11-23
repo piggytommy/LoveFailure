@@ -1,0 +1,13 @@
+-content_for :head do
+  =stylesheet_link_tag 'articles/item.css', :media => 'screen'
+
+.article_item
+  .title_bar
+    = link_to story_article_path(story, article), do
+      =article.name
+  .a_content
+    %p=truncate(article.content, :length => 140)
+  .actions_bar  
+    %span.a_date= "#{time_ago_in_words(article.created_at)}前" 
+    .actions
+      = link_to '编辑', edit_story_article_path(story, article)

@@ -1,21 +1,3 @@
-%h1="Listing articles"
-%table
-	%tr
-		%th="Name"
-		%th="Content"
-		%th
-		%th
-		%th
-- @articles.each do |a|		
-	%tr
-		%td=a.name
-		%td=a.content
-		%td
-			= link_to 'Show', a
-			= link_to 'Edit', edit_article_path(a)
-			= link_to 'Destroy', a, :confirm => 'Are you sure?',  :method => :delete
-			
-%br
-= link_to 'New Article', new_article_path
-
-		
+.container
+  =render :partial => 'article_item', 
+          :collection => @articles, :as => :article, :locals => {:story => @story}

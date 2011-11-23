@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'carrierwave/mongoid'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -38,9 +39,9 @@ module Loveloser
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    config.i18n.default_locale = "zh"
     config.generators do |g|
       g.template_engine :haml
     end
-    
   end
 end

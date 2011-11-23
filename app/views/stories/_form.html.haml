@@ -1,0 +1,62 @@
+= content_for :head do 
+  = stylesheet_link_tag 'fileuploader.css', :media => 'screen'
+  = javascript_include_tag 'fileuploader.js'
+  = javascript_include_tag 'fancybox/fancybox.js'
+  = stylesheet_link_tag 'fancybox.css', :media => 'screen'
+  = stylesheet_link_tag 'stories/form.css', :media => 'screen'
+
+.left_area
+  = form_for(@story) do |f|
+    .field
+      = f.label :name, "名称"
+      %br
+      = f.text_field :name
+    .field
+      = f.label :description, "描述"
+      %br
+      = f.text_area :description
+      = f.hidden_field :image_url
+      = f.hidden_field :image_small_url
+      = f.hidden_field :image_medium_url
+      = f.hidden_field :image_large_url
+    .field
+      = f.check_box :private
+      = f.label :private, '私密', :class => 'private'
+      = f.submit "完成"
+.right_area
+  #story_avatar
+    %img{:src => @story.image_medium_url }
+  #file-uploader
+    ="上传封面"
+
+
+:javascript
+  var uploader = new qq.FileUploaderBasic({
+    element: document.getElementById('file-uploader'),  
+    allowedExtensions: ['jpg', 'jpeg', 'png'],
+    action: "#{new_story_cover_path}",
+    button: document.getElementById('file-uploader'),
+    sizeLimit: 8294304,
+
+
+    onProgress: function(id, fileName, loaded, total){
+    },
+
+    onSubmit: function(id, fileName){
+      $("#story_avatar img").attr('src', '/images/ui/pic_loading.gif');
+    },
+
+    onComplete: function(id, fileName, responseJSON){
+      var id = responseJSON.data.photo.id
+      var url = responseJSON.data.photo.url
+      var small = responseJSON.data.photo.small
+      var medium = responseJSON.data.photo.medium
+      var large = responseJSON.data.photo.large
+      $("#story_avatar img").attr('src', medium);
+      $("#story_image_url").val(url);
+      $("#story_image_small_url").val(small);
+      $("#story_image_medium_url").val(medium);
+      $("#story_image_large_url").val(large);
+     }
+  });
+   

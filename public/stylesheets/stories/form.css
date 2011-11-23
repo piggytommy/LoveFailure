@@ -1,0 +1,295 @@
+/* incase an inverted custom gradient isn't specified */
+/* line 177, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class, .left_area form .field #story_submit, .right_area #file-uploader {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('/images/button_bg.png?1321452277') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 165, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, .left_area form .field #story_submit::-moz-focus-inner, .right_area #file-uploader::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 168, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, .left_area form .field #story_submit:focus, .right_area #file-uploader:focus {
+  outline: none;
+}
+
+/* line 18, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form label {
+  font-weight: bold;
+}
+/* line 19, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form fieldset {
+  padding: 1.4em;
+  margin: 0 0 1.5em 0;
+}
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form legend {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password] {
+  margin: 0.5em 0;
+  background-color: white;
+  padding: 5px;
+}
+/* line 27, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form input.title {
+  font-size: 1.5em;
+}
+/* line 29, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form textarea {
+  margin: 0.5em 0;
+  padding: 5px;
+}
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form select {
+  margin: 0.5em 0;
+}
+/* line 55, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form fieldset {
+  border: 1px solid #cccccc;
+}
+/* line 58, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password],
+form textarea {
+  background-color: #fff;
+  border: 1px solid #bbbbbb;
+}
+/* line 61, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form input.text:focus, form input.title:focus, form input[type=email]:focus, form input[type=text]:focus, form input[type=password]:focus,
+form textarea:focus {
+  border-color: #666666;
+}
+/* line 65, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form select {
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+}
+/* line 44, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password] {
+  width: 300px;
+}
+/* line 46, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+form textarea {
+  width: 390px;
+  height: 250px;
+}
+
+/* line 8, ../../../app/stylesheets/stories/form.sass */
+.left_area {
+  margin-top: 20px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .left_area {
+  overflow-x: hidden;
+}
+/* line 12, ../../../app/stylesheets/stories/form.sass */
+.left_area form .field {
+  width: 400px;
+}
+/* line 14, ../../../app/stylesheets/stories/form.sass */
+.left_area form .field #story_name {
+  width: 300px;
+  font-size: 16px;
+  padding: 7px;
+}
+/* line 18, ../../../app/stylesheets/stories/form.sass */
+.left_area form .field #story_private {
+  margin-right: 0px;
+}
+/* line 21, ../../../app/stylesheets/stories/form.sass */
+.left_area form .field #story_description {
+  width: 400px;
+  height: 300px;
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.2;
+  resize: none;
+}
+/* line 29, ../../../app/stylesheets/stories/form.sass */
+.left_area form .field label {
+  color: #999999;
+  font-weight: normal;
+  font-size: 12px;
+}
+/* line 34, ../../../app/stylesheets/stories/form.sass */
+.left_area form .field #story_submit {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(10%, #ffffff), color-stop(50%, #d5d5d5), color-stop(50%, #cecece), color-stop(100%, #e7e7e7));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  background-image: -moz-linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  background-image: linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  border-color: #b7b7b7;
+  text-shadow: white 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  float: right;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.left_area form .field #story_submit, .left_area form .field #story_submit:visited {
+  color: #222222;
+}
+/* line 31, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.left_area form .field #story_submit:hover, .left_area form .field #story_submit:focus {
+  background-color: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(10%, #fcfcfc), color-stop(50%, #cecece), color-stop(50%, #c6c6c6), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  background-image: -moz-linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  background-image: -o-linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  background-image: -ms-linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  background-image: linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  border-color: #afafaf;
+  text-shadow: white 0px 1px 1px;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.left_area form .field #story_submit:hover, .left_area form .field #story_submit:hover:visited, .left_area form .field #story_submit:focus, .left_area form .field #story_submit:focus:visited {
+  color: #222222;
+}
+/* line 36, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.left_area form .field #story_submit:active {
+  background-color: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(30%, #d3d3d3), color-stop(50%, #c9c9c9), color-stop(50%, #c1c1c1), color-stop(100%, #e2e2e2));
+  background-image: -webkit-linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  background-image: -moz-linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  background-image: -o-linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  background-image: -ms-linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  background-image: linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  border-color: #a7a7a7;
+  text-shadow: white 0px -1px -1px;
+  -moz-box-shadow: #b7b7b7 0 0.08em 0.2em 1px inset;
+  -webkit-box-shadow: #b7b7b7 0 0.08em 0.2em 1px inset;
+  -o-box-shadow: #b7b7b7 0 0.08em 0.2em 1px inset;
+  box-shadow: #b7b7b7 0 0.08em 0.2em 1px inset;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.left_area form .field #story_submit:active, .left_area form .field #story_submit:active:visited {
+  color: #222222;
+}
+
+/* line 38, ../../../app/stylesheets/stories/form.sass */
+.right_area {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 470px;
+  margin-top: 20px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .right_area {
+  overflow-x: hidden;
+}
+/* line 42, ../../../app/stylesheets/stories/form.sass */
+.right_area #story_avatar {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+/* line 47, ../../../app/stylesheets/stories/form.sass */
+.right_area #file-uploader {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 10px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(10%, #ffffff), color-stop(50%, #d5d5d5), color-stop(50%, #cecece), color-stop(100%, #e7e7e7));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  background-image: -moz-linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  background-image: linear-gradient(#ffffff, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7);
+  border-color: #b7b7b7;
+  text-shadow: white 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 3px 5px;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.right_area #file-uploader, .right_area #file-uploader:visited {
+  color: #222222;
+}
+/* line 31, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.right_area #file-uploader:hover, .right_area #file-uploader:focus {
+  background-color: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(10%, #fcfcfc), color-stop(50%, #cecece), color-stop(50%, #c6c6c6), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  background-image: -moz-linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  background-image: -o-linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  background-image: -ms-linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  background-image: linear-gradient(#ffffff, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0);
+  border-color: #afafaf;
+  text-shadow: white 0px 1px 1px;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.right_area #file-uploader:hover, .right_area #file-uploader:hover:visited, .right_area #file-uploader:focus, .right_area #file-uploader:focus:visited {
+  color: #222222;
+}
+/* line 36, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.right_area #file-uploader:active {
+  background-color: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(30%, #d3d3d3), color-stop(50%, #c9c9c9), color-stop(50%, #c1c1c1), color-stop(100%, #e2e2e2));
+  background-image: -webkit-linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  background-image: -moz-linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  background-image: -o-linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  background-image: -ms-linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  background-image: linear-gradient(#cecece, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2);
+  border-color: #a7a7a7;
+  text-shadow: white 0px -1px -1px;
+  -moz-box-shadow: #b7b7b7 0 0.08em 0.2em 1px inset;
+  -webkit-box-shadow: #b7b7b7 0 0.08em 0.2em 1px inset;
+  -o-box-shadow: #b7b7b7 0 0.08em 0.2em 1px inset;
+  box-shadow: #b7b7b7 0 0.08em 0.2em 1px inset;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.right_area #file-uploader:active, .right_area #file-uploader:active:visited {
+  color: #222222;
+}

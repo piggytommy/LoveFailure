@@ -1,0 +1,33 @@
+/* line 3, ../../../app/stylesheets/stories/index.sass */
+.my_stories {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 630px;
+  margin-top: 20px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180@3.0.7/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .my_stories {
+  overflow-x: hidden;
+}
+/* line 6, ../../../app/stylesheets/stories/index.sass */
+.my_stories .story_item {
+  float: left;
+  width: 130px;
+  margin-right: 10px;
+}
+/* line 10, ../../../app/stylesheets/stories/index.sass */
+.my_stories .story_item a {
+  display: block;
+  float: left;
+}
+/* line 13, ../../../app/stylesheets/stories/index.sass */
+.my_stories .story_item a img {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 5px;
+}
+/* line 18, ../../../app/stylesheets/stories/index.sass */
+.my_stories .story_item a:hover {
+  text-decoration: none;
+}
